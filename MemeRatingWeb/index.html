@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meme Rating</title>
+    <!-- Bulma.io! -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- update the version number as needed -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+</head>
+<body>
+    <!-- Hero Banner -->
+    <section class="hero is-small is-primary has-text-centered">
+        <div class="hero-body">
+            <p class="title is-size-1">
+                Meme Duel
+            </p>
+            <p class="subtitle is-size-3">
+                Bringing joy one meme at a time...
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h1 id="action-title" class="title has-text-centered">Choose the best meme...</h1>
+    </section>
+
+    <div class="columns is-centered has-text-centered">
+        <!-- Meme 1 -->
+        <div class="column is-4">
+            <div id="meme1_card" class="card">
+                <div class="card-image">
+                    <figure class="image">
+                        <img id="meme1-image" src="">
+                    </figure>
+                </div>
+                <div id="meme1-card-content" class="card-content">
+                    <div class="content"">
+                        <p id="meme1-rating" class="subtitle"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meme 2 -->
+        <div class="column is-4">
+            <div id="meme2_card" class="card">
+                <div class="card-image">
+                    <figure class="image">
+                        <img id="meme2-image" src="">
+                    </figure>
+                </div>
+                <div id="meme2-card-content" class="card-content">
+                    <div class="content">
+                        <p id="meme2-rating" class="subtitle"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section has-text-centered">
+        <button id="next-meme-button" class="button">Refresh Memes</button>
+    </div>
+
+    <section class="section">
+        <h1 class="title has-text-centered">... Or upload your memes!</h1>
+    </section>
+
+    <div class="container has-text-centered">
+        <input id="meme-url" class="input is-primary" type="text" placeholder="Image URL">
+        <a id="submit-button" class="button">Upload</a>
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Made by Max & Ethan
+            </p>
+        </div>
+    </footer>
+
+    <script type="module">
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAZ1nuEswbTs7AKPv1ZxU5AtOZXOMTi-HA",
+          authDomain: "the-meme-duel.firebaseapp.com",
+          databaseURL: "https://the-meme-duel-default-rtdb.firebaseio.com",
+          projectId: "the-meme-duel",
+          storageBucket: "the-meme-duel.appspot.com",
+          messagingSenderId: "156113232489",
+          appId: "1:156113232489:web:69fcff0f6486f8bf0fb8f8"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script> 
+
+    <script defer src="script.js"></script>
+
+</body>
+</html>

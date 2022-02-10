@@ -1,0 +1,4 @@
+/* Overwrite Bulma's styles */
+input {
+    width: 50% !important;
+}
